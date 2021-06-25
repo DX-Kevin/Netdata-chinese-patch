@@ -1,8 +1,10 @@
 ## Netdata 简体中文汉化补丁
 
-基于繁体中文版的转换
+-基于繁体中文版的转换
+
 <https://github.com/jasoncheng7115/netdata-cpatch>
-基于简体中文版的转换
+-基于简体中文版的转换
+
 <https://github.com/YuanzhuL/netdata-cpatch>
 
 ## 使用说明
@@ -11,18 +13,18 @@
 ```bash
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 ```
-1.先备份或者重命名下面四个文件
+-1.先备份或者重命名下面四个文件
  dashboard_info.js dashboard.js main.js index.html
 
-2.下载本项目四个文件到`/usr/share/netdata/web/` 目录
+-2.下载本项目四个文件到`/usr/share/netdata/web/` 目录
  dashboard_info.js dashboard.js main.js index.html
 
-3.修改四个文件的权限为：`netdata:netdata`
+-3.修改四个文件的权限为：`netdata:netdata`
 命令：
 cd /usr/share/netdata/web/
 chown netdata:netdata dashboard_info.js dashboard.js main.js index.html
 
-4.完成后先清空浏览器缓存再请刷新网页即可
+-4.完成后先清空浏览器缓存再请刷新网页即可
 
 
 &nbsp;&nbsp;
