@@ -28,7 +28,7 @@ dashboard_info.js dashboard.js main.js index.html
 cd /usr/share/netdata/web/
 chown netdata:netdata dashboard_info.js dashboard.js main.js index.html
 ```
-- 4.完成后先清空浏览器缓存再请刷新网页即可
+- 4.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
 
 
 &nbsp;&nbsp;
