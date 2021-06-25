@@ -20,11 +20,11 @@ dashboard_info.js dashboard.js main.js index.html
 ```
 - 2.下载本项目四个文件到`/usr/share/netdata/web/` 目录
 ```bash
- dashboard_info.js dashboard.js main.js index.html
+dashboard_info.js dashboard.js main.js index.html
 ```
 - 3.修改四个文件的权限为：`netdata:netdata`
-  - 命令：
 ```bash
+命令：
 cd /usr/share/netdata/web/
 chown netdata:netdata dashboard_info.js dashboard.js main.js index.html
 ```
