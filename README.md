@@ -7,12 +7,17 @@
 
 <https://github.com/YuanzhuL/netdata-cpatch>
 
+## 中文简体版一键自动安装脚本
+中文简体版一键安装脚本
+```bash
+bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese.sh)
+```
 ## 使用说明
 首先安装原版netdata，然后在在替换汉化文件
 
-原版一键安装脚本
+中文简体版一键汉化脚本
 ```bash
-bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese-patch.sh)
 ```
 - 1.先备份或者重命名下面四个文件
 ```bash
