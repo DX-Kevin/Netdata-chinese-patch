@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 if [ -f "/usr/bin/yum" ] && [ -d "/etc/yum.repos.d" ]; then
   PM="yum"
 elif [ -f "/usr/bin/apt-get" ] && [ -f "/usr/bin/dpkg" ]; then
