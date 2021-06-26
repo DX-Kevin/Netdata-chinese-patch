@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 set -e
-if [ ! -f /bin/curl ];then
-  if [ "${PM}" = "yum" ]; then
-    yum install curl -y
-  elif [ "${PM}" = "apt-get" ]; then
-    apt-get install curl -y
-  fi
+if [ -f "/usr/bin/yum" ] && [ -d "/etc/yum.repos.d" ]; then
+  PM="yum"
+elif [ -f "/usr/bin/apt-get" ] && [ -f "/usr/bin/dpkg" ]; then
+  PM="apt-get"
+fi
+if [ "${PM}" = "yum" ]; then
+  yum install update -y
+elif [ "${PM}" = "apt-get" ]; then
+  apt-get install update -y
 fi
 curl -Ss https://my-netdata.io/kickstart.sh|bash
 curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese-patch.sh|bash
