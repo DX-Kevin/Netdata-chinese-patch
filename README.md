@@ -1,24 +1,21 @@
 ## Netdata 简体中文汉化补丁
 
- -  基于繁体中文版的转换
 
-<https://github.com/jasoncheng7115/netdata-cpatch>
-- 基于简体中文版的转换
-
-<https://github.com/YuanzhuL/netdata-cpatch>
 
 ## 中文简体版一键自动安装脚本
 中文简体版一键安装脚本
 ```bash
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese.sh)
 ```
-## 使用说明
+安装完成后需要添加19999端口到例外（允许19999端口访问）
+## 中文简体版汉化补丁一键自动安装脚本
 💡汉化脚本适用于已安装英文原版Netdata
 
 中文简体版一键汉化脚本
 ```bash
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese-patch.sh)
 ```
+## 中文简体版汉化补丁手动安装方法
 - 1.先备份或者重命名下面四个文件
 ```bash
 dashboard_info.js dashboard.js main.js index.html
@@ -36,6 +33,8 @@ chown netdata:netdata dashboard_info.js dashboard.js main.js index.html
 - 4.在系统防火墙添加默认端口：19999到例外
 - 5.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
 
-
-
+## 基于项目
+<https://github.com/netdata/netdata>
+<https://github.com/jasoncheng7115/netdata-cpatch>
+<https://github.com/YuanzhuL/netdata-cpatch>
 &nbsp;&nbsp;
