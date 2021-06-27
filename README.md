@@ -26,9 +26,7 @@ dashboard_info.js dashboard.js main.js index.html
 ```
 - 3.修改四个文件的权限为：`netdata:netdata`
 ```bash
-命令：
-cd /usr/share/netdata/web/
-chown netdata:netdata dashboard_info.js dashboard.js main.js index.html
+chown -R netdata:netdata /usr/share/netdata/web/
 ```
 - 4.在系统防火墙添加默认端口：19999到例外
 - 5.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
