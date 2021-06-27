@@ -17,6 +17,6 @@ if [ "${PM}" = "yum" ]; then
 fi
 mv $C$DI $C$DI.bk&&mv $C$D $C$D.bk&&mv $C$M $C$M.bk&&mv $C$I $C$I.bk
 wget -P $C $DL$D&&wget -P $C $DL$DI&&wget -P $C $DL$I&&wget -P $C $DL$M
-chown netdata:netdata $C$D $C$DI $C$I $C$M
+chown -R netdata:netdata $C
 systemctl stop netdata&&systemctl start netdata
 echo -e "\033[40;32m-------------简体中文版Netdata补丁安装完成-------------\033[0m"
