@@ -6,7 +6,7 @@ bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch
 ```
 安装完成后需要添加19999端口到例外（允许19999端口访问）
 ## Netdata 中文简体版汉化补丁一键自动安装脚本
-💡汉化脚本适用于已安装英文原版Netdata
+💡汉化脚本适用于已安装英文原版 Netdata
 
 ```bash
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese-patch.sh)
