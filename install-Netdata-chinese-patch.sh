@@ -21,31 +21,5 @@ wget -P $C $DL$D&&wget -P $C $DL$DI&&wget -P $C $DL$I&&wget -P $C $DL$M
 echo -e "\033[40;32m-------------2-------------\033[0m"
 chown netdata:netdata $C$D $C$DI $C$I $C$M
 echo -e "\033[40;32m-------------3-------------\033[0m"
-if [  -n "$(uname -a | grep Debian)" ]; then
-    V=`cat /etc/os-release`
-    ufw allow 19999
-    else
-        if [  -n "$(uname -a | grep Ubuntu)" ]; then
-            V=`lsb_release -a`
-            ufw allow 19999
-            else
-                if [ $version == 6 ];then
-                    /sbin/iptables -I INPUT -p tcp --dport 19999 -j ACCEPT
-                    /etc/rc.d/init.d/iptables save
-                    /etc/rc.d/init.d/iptables restart
-                    elif [ $version == 7  ];then
-                    echo "CentOS:"$version
-                    /bin/systemctl restart firewalld
-                    firewall-cmd --zone=public --add-port=19999/tcp --permanent
-                    firewall-cmd --reload
-                    elif [ $version == 8  ];then
-                    echo "CentOS:"$version
-                    /bin/systemctl restart firewalld
-                    firewall-cmd --zone=public --add-port=19999/tcp --permanent
-                    firewall-cmd --reload
-                fi
-        fi
-fi
-echo -e "\033[40;32m-------------4-------------\033[0m"
 systemctl stop netdata&&systemctl start netdata
 echo -e "\033[40;32m-------------简体中文版Netdata补丁安装完成-------------\033[0m"
