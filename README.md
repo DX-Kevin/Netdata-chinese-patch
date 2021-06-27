@@ -13,7 +13,7 @@
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese.sh)
 ```
 ## 使用说明
-> 💡汉化脚本适用于已安装英文原版Netdata
+💡汉化脚本适用于已安装英文原版Netdata
 
 中文简体版一键汉化脚本
 ```bash
