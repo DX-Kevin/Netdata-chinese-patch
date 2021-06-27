@@ -16,7 +16,9 @@ if [ "${PM}" = "yum" ]; then
         apt-get install wget -y
 fi
 mv $C$DI $C$DI.bk&&mv $C$D $C$D.bk&&mv $C$M $C$M.bk&&mv $C$I $C$I.bk
+echo -e "\033[40;32m-------------1-------------\033[0m"
 wget -P $C $DL$D&&wget -P $C $DL$DI&&wget -P $C $DL$I&&wget -P $C $DL$M
+echo -e "\033[40;32m-------------2-------------\033[0m"
 chown netdata:netdata $C$D $C$DI $C$I $C$M
 if [  -n "$(uname -a | grep Debian)" ]; then
     V=`cat /etc/os-release`
