@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+硬盘// SPDX-License-Identifier: GPL-3.0-or-later
 
 // Codacy declarations
 /* global NETDATA */
@@ -44,13 +44,13 @@ netdataDashboard.menu = {
     },
 
     'net': {
-        title: '网路介面',
+        title: '网络界面',
         icon: '<i class="fas fa-sitemap"></i>',
-        info: '网路介面的效能指标。'
+        info: '网络界面的效能指标。'
     },
 
     'ip': {
-        title: '网路堆叠',
+        title: '网络堆叠',
         icon: '<i class="fas fa-cloud"></i>',
         info: function (os) {
             if(os === "linux")
@@ -61,7 +61,7 @@ netdataDashboard.menu = {
     },
 
     'ipv4': {
-        title: 'IPv4 网路',
+        title: 'IPv4 网络',
         icon: '<i class="fas fa-cloud"></i>',
         info: 'IPv4 效能指标。' +
             '<a href="https://en.wikipedia.org/wiki/IPv4" target="_blank">Internet Protocol version 4 (IPv4)</a> is ' +
@@ -73,7 +73,7 @@ netdataDashboard.menu = {
     },
 
     'ipv6': {
-        title: 'IPv6 网路',
+        title: 'IPv6 网络',
         icon: '<i class="fas fa-cloud"></i>',
         info: 'IPv6 效能指标。 <a href="https://en.wikipedia.org/wiki/IPv6" target="_blank">Internet Protocol version 6 (IPv6)</a> is the most recent version of the Internet Protocol (IP), the communications protocol that provides an identification and location system for computers on networks and routes traffic across the Internet. IPv6 was developed by the Internet Engineering Task Force (IETF) to deal with the long-anticipated problem of IPv4 address exhaustion. IPv6 is intended to replace IPv4.'
     },
@@ -109,15 +109,15 @@ netdataDashboard.menu = {
     },
 
     'mem': {
-        title: '记忆体',
+        title: '内存',
         icon: '<i class="fas fa-microchip"></i>',
-        info: '系统记忆体管理的详细资讯。'
+        info: '系统内存管理的详细资讯。'
     },
 
     'disk': {
-        title: '磁碟',
+        title: '硬盘',
         icon: '<i class="fas fa-hdd"></i>',
-        info: '系统中所有磁碟效能资讯图表。特别留意：这是以 <code>iostat -x</code> 所取得的效能数据做为呈现。在预设情况下，netdata 不会显示单一分割区与未挂载的虚拟磁碟效能图表。若仍想要显示，可以修改 netdata 设定档中的相关设定。'
+        info: '系统中所有硬盘效能资讯图表。特别留意：这是以 <code>iostat -x</code> 所取得的效能数据做为呈现。在预设情况下，netdata 不会显示单一分割区与未挂载的虚拟硬盘效能图表。若仍想要显示，可以修改 netdata 设定档中的相关设定。'
     },
 
     'sensors': {
@@ -139,7 +139,7 @@ netdataDashboard.menu = {
     },
 
     'nfsd': {
-        title: 'NFS 伺服器',
+        title: 'NFS 服务器',
         icon: '<i class="fas fa-folder-open"></i>',
         info: 'Performance metrics of the Network File Server. NFS is a distributed file system protocol, allowing a user on a client computer to access files over a network, much like local storage is accessed. NFS, like many other protocols, builds on the Open Network Computing Remote Procedure Call (ONC RPC) system. The NFS is an open standard defined in Request for Comments (RFC).'
     },
@@ -159,7 +159,7 @@ netdataDashboard.menu = {
     'btrfs': {
         title: 'BTRFS 档案系统',
         icon: '<i class="fas fa-folder-open"></i>',
-        info: 'BTRFS 档案系统磁碟空间使用指标。'
+        info: 'BTRFS 档案系统硬盘空间使用指标。'
     },
 
     'apps': {
@@ -197,7 +197,7 @@ netdataDashboard.menu = {
     'cgroup': {
         title: '',
         icon: '<i class="fas fa-th"></i>',
-        info: '容器资源使用率指标。netdata 从 <b>cgroups</b> (<b>control groups</b> 的缩写) 中读取这些资讯，cgroups 是 Linux 核心的一个功能，做限制与计算程序集中的资源使用率 (CPU、记忆体、磁碟 I/O、网路...等等)。<b>cgroups</b> 与 <b>namespaces</b> (程序之间的隔离) 结合提供了我们所说的：<b>容器</b>。'
+        info: '容器资源使用率指标。netdata 从 <b>cgroups</b> (<b>control groups</b> 的缩写) 中读取这些资讯，cgroups 是 Linux 核心的一个功能，做限制与计算程序集中的资源使用率 (CPU、内存、硬盘 I/O、网路...等等)。<b>cgroups</b> 与 <b>namespaces</b> (程序之间的隔离) 结合提供了我们所说的：<b>容器</b>。'
     },
 
     'cgqemu': {
@@ -509,7 +509,7 @@ netdataDashboard.submenu = {
 
     'mem.ksm': {
         title: 'deduper (ksm)',
-        info: 'Kernel Same-page Merging (KSM) 效能监视，经由读取 <code>/sys/kernel/mm/ksm/</code> 下的档案而来。KSM 是在 Linux 核心 (自 2.6.32 版起) 内含的一种节省记忆体使用率重复资料删除功能。)。 KSM 服务程序 ksmd 会定期扫描记忆体区域，寻找正有资料要更新进来且相同资料存在的分页。KSM 最初是从 KVM 专案开发中而来，利用这种共用相同资料的机制，即可以让更多的虚拟机器放到记忆体中。另外，对许多会产生同样内容的应用程序来说，这个功能是相当有效益的。'
+        info: 'Kernel Same-page Merging (KSM) 效能监视，经由读取 <code>/sys/kernel/mm/ksm/</code> 下的档案而来。KSM 是在 Linux 核心 (自 2.6.32 版起) 内含的一种节省内存使用率重复资料删除功能。)。 KSM 服务程序 ksmd 会定期扫描内存区域，寻找正有资料要更新进来且相同资料存在的分页。KSM 最初是从 KVM 专案开发中而来，利用这种共用相同资料的机制，即可以让更多的虚拟机器放到内存中。另外，对许多会产生同样内容的应用程序来说，这个功能是相当有效益的。'
     },
 
     'mem.hugepages': {
@@ -517,7 +517,7 @@ netdataDashboard.submenu = {
     },
 
     'mem.numa': {
-        info: 'Non-Uniform Memory Access (NUMA) 是一种记忆体存取分隔设计，在 NUMA 之下，一个处理器存取自己管理的的记忆体，将比非自己管理的记忆体 (另一个处理器所管理的记忆体或是共用记忆体) 具有更快速的效能。在 <a href="https://www.kernel.org/doc/Documentation/numastat.txt" target="_blank">Linux 核心文件</a> 中有详细说明这些指标。'
+        info: 'Non-Uniform Memory Access (NUMA) 是一种内存存取分隔设计，在 NUMA 之下，一个处理器存取自己管理的的内存，将比非自己管理的内存 (另一个处理器所管理的内存或是共用内存) 具有更快速的效能。在 <a href="https://www.kernel.org/doc/Documentation/numastat.txt" target="_blank">Linux 核心文件</a> 中有详细说明这些指标。'
     },
 
     'ip.ecn': {
@@ -626,30 +626,30 @@ netdataDashboard.context = {
         info: function (os) {
             void(os);
             return 'CPU 使用率总表 (全部核心)。 当数值为 100% 时，表示您的 CPU 非常忙碌没有闲置空间。您可以在 <a href="#menu_cpu">CPU</a> 区段及以及 <a href="#menu_apps">应用程序</a> 区段深入了解每个核心与应用程序的使用情况。'
-                + netdataDashboard.sparkline('<br/>请特别关注 <b>iowait</b> ', 'system.cpu', 'iowait', '%', '，如果它一直处于较高的情况，这表示您的磁碟是效能瓶颈，您的系统效能会明显降低。')
+                + netdataDashboard.sparkline('<br/>请特别关注 <b>iowait</b> ', 'system.cpu', 'iowait', '%', '，如果它一直处于较高的情况，这表示您的硬盘是效能瓶颈，您的系统效能会明显降低。')
                 + netdataDashboard.sparkline('<br/>另一个重要的指标是 <b>softirq</b> ', 'system.cpu', 'softirq', '%', '，若这个数值持续在较高的情况，很有可能是您的网路驱动部份有问题。');
         },
         valueRange: "[0, 100]"
     },
 
     'system.load': {
-        info: '目前系统负载，也就是指 CPU 使用情况或正在等待系统资源 (通常是 CPU 与磁碟)。这三个指标分别是 1、5、15 分钟。系统每 5 秒会计算一次。更多的资讯可以参阅 <a href="https://en.wikipedia.org/wiki/Load_(computing)" target="_blank">维基百科</a> 说明。',
+        info: '目前系统负载，也就是指 CPU 使用情况或正在等待系统资源 (通常是 CPU 与硬盘)。这三个指标分别是 1、5、15 分钟。系统每 5 秒会计算一次。更多的资讯可以参阅 <a href="https://en.wikipedia.org/wiki/Load_(computing)" target="_blank">维基百科</a> 说明。',
         height: 0.7
     },
 
     'system.io': {
         info: function (os) {
-            var s = '磁碟 I/O 总计, 包含所有的实体磁碟。您可以在 <a href="#menu_disk">磁碟</a> 区段查看每一个磁碟的详细资讯，也可以在 <a href="#menu_apps">应用程序</a> 区段了解每一支应用程序对于磁碟的使用情况。';
+            var s = '硬盘 I/O 总计, 包含所有的实体硬盘。您可以在 <a href="#menu_disk">硬盘</a> 区段查看每一个硬盘的详细资讯，也可以在 <a href="#menu_apps">应用程序</a> 区段了解每一支应用程序对于硬盘的使用情况。';
 
             if (os === 'linux')
-                return s + ' 实体磁碟指的是 <code>/sys/block</code> 中有列出，但是没有在 <code>/sys/devices/virtual/block</code> 的所有磁碟。';
+                return s + ' 实体硬盘指的是 <code>/sys/block</code> 中有列出，但是没有在 <code>/sys/devices/virtual/block</code> 的所有硬盘。';
             else
                 return s;
         }
     },
 
     'system.pgpgio': {
-        info: '从记忆体分页到磁碟的 I/O。通常是这个系统所有磁碟的总 I/O。'
+        info: '从内存分页到硬盘的 I/O。通常是这个系统所有硬盘的总 I/O。'
     },
 
     'system.swapio': {
@@ -684,7 +684,7 @@ netdataDashboard.context = {
     },
 
     'system.processes': {
-        info: '系统程序。<b>running</b> 显示正在 CPU 中的程序。<b>Blocked</b> 显示目前被挡下无法进入 CPU 执行的程序，例如：正在等待磁碟完成动作，才能继续。'
+        info: '系统程序。<b>running</b> 显示正在 CPU 中的程序。<b>Blocked</b> 显示目前被挡下无法进入 CPU 执行的程序，例如：正在等待硬盘完成动作，才能继续。'
     },
 
     'system.active_processes': {
@@ -723,11 +723,11 @@ netdataDashboard.context = {
     },
 
     'system.ram': {
-        info: '系统随机存取记忆体 (也就是实体记忆体) 使用情况。'
+        info: '系统随机存取内存 (也就是实体内存) 使用情况。'
     },
 
     'system.swap': {
-        info: '系统交换空间 (Swap) 记忆体使用情况。Swap 空间会在实体记忆体 (RAM) 已满的情况下使用。当系统记忆体已满但还需要使用更多记忆体情况下，系统记忆体中的比较没有异动的 Page 将会被移动到 Swap 空间 (通常是磁碟、磁碟分割区或是档案)。'
+        info: '系统交换空间 (Swap) 内存使用情况。Swap 空间会在实体内存 (RAM) 已满的情况下使用。当系统内存已满但还需要使用更多内存情况下，系统内存中的比较没有异动的 Page 将会被移动到 Swap 空间 (通常是硬盘、硬盘分割区或是档案)。'
     },
 
     // ------------------------------------------------------------------------
@@ -788,15 +788,15 @@ netdataDashboard.context = {
 
     'mem.committed': {
         colors: NETDATA.colors[3],
-        info: 'Committed 记忆体，是指程序分配到的所有记忆体总计。'
+        info: 'Committed 内存，是指程序分配到的所有内存总计。'
     },
 
     'mem.available': {
-        info: '可用记忆体是由核心估算而来，也就是使用者空间程序可以使用的 RAM 总量，而不会造成交换 (Swap) 发生。'
+        info: '可用内存是由核心估算而来，也就是使用者空间程序可以使用的 RAM 总量，而不会造成交换 (Swap) 发生。'
     },
 
     'mem.writeback': {
-        info: '<b>Dirty</b> 是等待写入磁碟的记忆体量。<b>Writeback</b> 是指有多少记忆体内容被主动写入磁碟。'
+        info: '<b>Dirty</b> 是等待写入硬盘的内存量。<b>Writeback</b> 是指有多少内存内容被主动写入硬盘。'
     },
 
     'mem.kernel': {
@@ -1062,11 +1062,11 @@ netdataDashboard.context = {
             netdataDashboard.gaugeChart('读取', '12%', 'reads'),
             netdataDashboard.gaugeChart('写入', '12%', 'writes')
         ],
-        info: '磁碟传输资料的总计。'
+        info: '硬盘传输资料的总计。'
     },
 
     'disk.ops': {
-        info: '已完成的磁碟 I/O operations。提醒：实际上的 operations 数量可能更高，因为系统能够将它们互相合并 (详见 operations 图表)。'
+        info: '已完成的硬盘 I/O operations。提醒：实际上的 operations 数量可能更高，因为系统能够将它们互相合并 (详见 operations 图表)。'
     },
 
     'disk.qops': {
