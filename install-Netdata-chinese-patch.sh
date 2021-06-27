@@ -20,6 +20,7 @@ echo -e "\033[40;32m-------------1-------------\033[0m"
 wget -P $C $DL$D&&wget -P $C $DL$DI&&wget -P $C $DL$I&&wget -P $C $DL$M
 echo -e "\033[40;32m-------------2-------------\033[0m"
 chown netdata:netdata $C$D $C$DI $C$I $C$M
+echo -e "\033[40;32m-------------3-------------\033[0m"
 if [  -n "$(uname -a | grep Debian)" ]; then
     V=`cat /etc/os-release`
     ufw allow 19999
@@ -45,5 +46,6 @@ if [  -n "$(uname -a | grep Debian)" ]; then
                 fi
         fi
 fi
+echo -e "\033[40;32m-------------4-------------\033[0m"
 systemctl stop netdata&&systemctl start netdata
 echo -e "\033[40;32m-------------简体中文版Netdata补丁安装完成-------------\033[0m"
