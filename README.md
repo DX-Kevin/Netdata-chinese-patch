@@ -36,7 +36,7 @@ chown -R netdata:netdata /usr/share/netdata/web/
   ```
   - Ubuntu命令:
   ```bash
- sudo ufw allow 19999
+  sudo ufw allow 19999
   ```
 - 5.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
 
