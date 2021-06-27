@@ -1,7 +1,6 @@
 ## Netdata 简体中文版一键自动安装脚本
 💡一键脚本适用于未安装 Netdata
 
-中文简体版一键安装脚本
 ```bash
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese.sh)
 ```
@@ -9,7 +8,6 @@ bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch
 ## Netdata 中文简体版汉化补丁一键自动安装脚本
 💡汉化脚本适用于已安装英文原版Netdata
 
-中文简体版一键汉化脚本
 ```bash
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese-patch.sh)
 ```
