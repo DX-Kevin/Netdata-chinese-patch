@@ -13,7 +13,7 @@
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese.sh)
 ```
 ## 使用说明
-首先安装原版netdata，然后在在替换汉化文件
+汉化脚本适用于已安装英文原版Netdata
 
 中文简体版一键汉化脚本
 ```bash
@@ -33,7 +33,8 @@ dashboard_info.js dashboard.js main.js index.html
 cd /usr/share/netdata/web/
 chown netdata:netdata dashboard_info.js dashboard.js main.js index.html
 ```
-- 4.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
+- 4.在系统防火墙添加默认端口：19999到例外
+- 5.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
 
 
 
