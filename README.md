@@ -29,6 +29,15 @@ dashboard_info.js dashboard.js main.js index.html
 chown -R netdata:netdata /usr/share/netdata/web/
 ```
 - 4.在系统防火墙添加默认端口：19999到例外
+  - Centos7命令:
+  ```bash
+  firewall-cmd --zone=public --add-port=19999/tcp --permanent
+  firewall-cmd --reload
+  ```
+  - Ubuntu命令:
+  ```bash
+ sudo ufw allow 19999
+  ```
 - 5.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
 
 ## 基于项目 (Contribute)
