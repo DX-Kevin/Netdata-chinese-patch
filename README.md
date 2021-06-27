@@ -1,8 +1,4 @@
-## Netdata 简体中文汉化补丁
-
-
-
-## 中文简体版一键自动安装脚本
+## Netdata 简体中文版一键自动安装脚本
 中文简体版一键安装脚本
 ```bash
 bash <(curl -Ss https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/install-Netdata-chinese.sh)
@@ -44,4 +40,4 @@ chown -R netdata:netdata /usr/share/netdata/web/
 - <https://github.com/netdata/netdata>
 - <https://github.com/jasoncheng7115/netdata-cpatch>
 - <https://github.com/YuanzhuL/netdata-cpatch>
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
