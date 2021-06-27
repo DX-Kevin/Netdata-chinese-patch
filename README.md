@@ -34,7 +34,7 @@ chown netdata:netdata dashboard_info.js dashboard.js main.js index.html
 - 5.完成后先清空浏览器缓存，再请刷新网页，即可显示中文界面。
 
 ## 基于项目
-<https://github.com/netdata/netdata>
-<https://github.com/jasoncheng7115/netdata-cpatch>
-<https://github.com/YuanzhuL/netdata-cpatch>
+- <https://github.com/netdata/netdata>
+- <https://github.com/jasoncheng7115/netdata-cpatch>
+- <https://github.com/YuanzhuL/netdata-cpatch>
 &nbsp;&nbsp;
