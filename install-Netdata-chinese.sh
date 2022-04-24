@@ -443,7 +443,7 @@ fi
 
 # ---------------------------------------------------------------------------------------------------------------------
 # look for an existing install and try to update that instead if it exists
-
+echo "100000"
 ndpath="$(command -v netdata 2>/dev/null)"
 if [ -z "$ndpath" ] && [ -x /opt/netdata/bin/netdata ] ; then
     ndpath="/opt/netdata/bin/netdata"
@@ -504,7 +504,7 @@ ndtmpdir=$(create_tmp_directory)
 cd "${ndtmpdir}" || exit 1
 
 dependencies
-
+echo "1"
 # ---------------------------------------------------------------------------------------------------------------------
 # download netdata package
 
