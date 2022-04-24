@@ -549,6 +549,7 @@ else
 fi
 
 # --------------------------------------------------------------------------------------------------------------------
+# claimed node
 
 if [ -n "${NETDATA_CLAIM_TOKEN}" ]; then
   progress "Attempting to claim agent to ${NETDATA_CLAIM_URL}"
