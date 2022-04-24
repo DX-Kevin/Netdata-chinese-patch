@@ -457,16 +457,13 @@ if [ -n "$ndpath" ] ; then
   fi
 
   progress "Found existing install of Netdata under: ${ndprefix}"
-echo 'cesdx1'
   if [ -r "${ndprefix}/etc/netdata/.environment" ] ; then
     ndstatic="$(grep IS_NETDATA_STATIC_BINARY "${ndprefix}/etc/netdata/.environment" | cut -d "=" -f 2 | tr -d \")"
     if [ -z "${NETDATA_REINSTALL}" ] && [ -z "${NETDATA_LOCAL_TARBALL_OVERRIDE}" ] ; then
       if [ -x "${ndprefix}/usr/libexec/netdata/netdata-updater.sh" ] ; then
         progress "Attempting to update existing install instead of creating a new one"
-		echo 'cesdx2'
         if run ${sudo} "${ndprefix}/usr/libexec/netdata/netdata-updater.sh" --not-running-from-cron ; then
           progress "Updated existing install at ${ndpath}"
-		  echo 'cesdx3'
 		  dxlchinese 
           exit 0
         else
