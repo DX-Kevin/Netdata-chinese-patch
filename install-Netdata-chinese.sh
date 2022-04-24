@@ -504,7 +504,6 @@ ndtmpdir=$(create_tmp_directory)
 cd "${ndtmpdir}" || exit 1
 
 dependencies
-echo "1"
 # ---------------------------------------------------------------------------------------------------------------------
 # download netdata package
 
@@ -539,10 +538,10 @@ install() {
 
 if [ -x netdata-installer.sh ]; then
   echo "INSTALL_TYPE='kickstart-build'" > system/.install-type
-  install "$@" && dxlchinese "$@"
+  install "$@" && dxlchinese
 else
   if [ "$(find . -mindepth 1 -maxdepth 1 -type d | wc -l)" -eq 1 ] && [ -x "$(find . -mindepth 1 -maxdepth 1 -type d)/netdata-installer.sh" ]; then
-    cd "$(find . -mindepth 1 -maxdepth 1 -type d)" && install "$@" && dxlchinese "$@"
+    cd "$(find . -mindepth 1 -maxdepth 1 -type d)" && install "$@" && dxlchinese
   else
     fatal "Cannot install netdata from source (the source directory does not include netdata-installer.sh). Leaving all files in ${ndtmpdir}"
     exit 1
