@@ -304,6 +304,25 @@ safe_sha256sum() {
   fi
 }
 
+dxlchinese() {
+  # install-Netdata-chinese-patch
+DL="https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/"
+D="dashboard.js"
+DI="dashboard_info.js"
+I="index.html"
+M="main.js"
+C="/usr/share/netdata/web/"
+mv $C$DI $C$DI.bk&&mv $C$D $C$D.bk&&mv $C$M $C$M.bk&&mv $C$I $C$I.bk
+curl -q -sSL --connect-timeout 10 --retry 3 --output $C$D $DL$D
+curl -q -sSL --connect-timeout 10 --retry 3 --output $C$DI $DL$DI
+curl -q -sSL --connect-timeout 10 --retry 3 --output $C$I $DL$I
+curl -q -sSL --connect-timeout 10 --retry 3 --output $C$M $DL$M
+chown -R netdata:netdata $C
+chmod 664 $C$D $C$DI $C$I $C$M
+systemctl stop netdata&&systemctl start netdata
+echo -e "\033[40;32m-------------简体中文版Netdata安装完成-------------\033[0m"
+
+}
 # ---------------------------------------------------------------------------------------------------------------------
 umask 022
 
@@ -520,10 +539,10 @@ install() {
 
 if [ -x netdata-installer.sh ]; then
   echo "INSTALL_TYPE='kickstart-build'" > system/.install-type
-  install "$@"
+  install "$@" && dxlchinese "$@"
 else
   if [ "$(find . -mindepth 1 -maxdepth 1 -type d | wc -l)" -eq 1 ] && [ -x "$(find . -mindepth 1 -maxdepth 1 -type d)/netdata-installer.sh" ]; then
-    cd "$(find . -mindepth 1 -maxdepth 1 -type d)" && install "$@"
+    cd "$(find . -mindepth 1 -maxdepth 1 -type d)" && install "$@" && dxlchinese "$@"
   else
     fatal "Cannot install netdata from source (the source directory does not include netdata-installer.sh). Leaving all files in ${ndtmpdir}"
     exit 1
@@ -548,18 +567,3 @@ if [ -n "${NETDATA_CLAIM_TOKEN}" ]; then
 fi
 # --------------------------------------------------------------------------------------------------------------------
 
-DL="https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/"
-D="dashboard.js"
-DI="dashboard_info.js"
-I="index.html"
-M="main.js"
-C="/usr/share/netdata/web/"
-mv $C$DI $C$DI.bk&&mv $C$D $C$D.bk&&mv $C$M $C$M.bk&&mv $C$I $C$I.bk
-curl -q -sSL --connect-timeout 10 --retry 3 --output $C$D $DL$D
-curl -q -sSL --connect-timeout 10 --retry 3 --output $C$DI $DL$DI
-curl -q -sSL --connect-timeout 10 --retry 3 --output $C$I $DL$I
-curl -q -sSL --connect-timeout 10 --retry 3 --output $C$M $DL$M
-chown -R netdata:netdata $C
-chmod 664 $C$D $C$DI $C$I $C$M
-systemctl stop netdata&&systemctl start netdata
-echo -e "\033[40;32m-------------简体中文版Netdata安装完成-------------\033[0m"
