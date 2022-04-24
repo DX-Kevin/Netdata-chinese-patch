@@ -545,7 +545,6 @@ if [ -n "${NETDATA_CLAIM_TOKEN}" ]; then
   else
     run_failed "Unable to claim node, you must do so manually."
   fi
-fi
 # --------------------------------------------------------------------------------------------------------------------
 
 DL="https://raw.githubusercontent.com/DX-Kevin/Netdata-chinese-patch/main/"
@@ -563,3 +562,5 @@ chown -R netdata:netdata $C
 chmod 664 $C$D $C$DI $C$I $C$M
 systemctl stop netdata&&systemctl start netdata
 echo -e "\033[40;32m-------------简体中文版Netdata安装完成-------------\033[0m"
+fi
+
